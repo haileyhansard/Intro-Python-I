@@ -17,4 +17,4 @@ print('x is %d, y is %g, z is "%s" ' % (10, 2.25, 'I like turtles!'))
 print('x is {:d}, y is {:g}, z is "{:s}"'.format(10, 2.25, "I like turtles!"))
 
 # Finally, print the same thing using an f-string
-print(f'x is {10}, y is {2.25}, z is "I like turtles!"')
+print(f'x is {x}, y is {(round(y, 2))}, z is "{z}"')

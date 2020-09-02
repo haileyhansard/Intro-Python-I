@@ -1,7 +1,7 @@
 # Write a function is_even that will return true if the passed-in number is even.
 
 # YOUR CODE HERE
-def even_num(num):
+def is_even(num):
     if num % 2 == 0:
         return True
 
@@ -12,7 +12,7 @@ num = int(num)
 # Print out "Even!" if the number is even. Otherwise print "Odd"
 
 # YOUR CODE HERE
-if even_num(num) == True:
+if is_even(num) == True:
     print("Even!")
 else: 
     print("Odd")

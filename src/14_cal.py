@@ -30,3 +30,17 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+cal = calendar.TextCalendar() #This creates a plain text calendar
+sysArgs = [sys.argv[i] for i in range(len(sys.argv))]
+currentYear = datetime.today().year
+currentMonth = datetime.today().month
+
+if len(sysArgs) == 1:
+    print(cal.prmonth(currentYear, currentMonth)) #This prints a month's calendar as returned by month(), since the length is only 1 in the system argument it will return the variables defined above, the current year and month.
+elif len(sysArgs) == 2:
+    print(cal.prmonth(currentYear, int(sys.argv[1]))) #It assumes you wrote in the month and it returns the input month with the current year
+elif len(sysArgs) == 3:
+    print(cal.prmonth(int(sys.argv[2]), int(sys.argv[1]))) #It assumes you wrote in both arguments, so it prints the month and year of what you wrote in.
+else:
+    print('Please enter the current month and/or year as integers, for example, 4 2020 for April 2020')
